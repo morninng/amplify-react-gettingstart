@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Authenticator, withAuthenticator } from '@aws-amplify/ui-react';
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <Authenticator></Authenticator>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
